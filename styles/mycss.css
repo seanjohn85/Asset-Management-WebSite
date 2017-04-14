@@ -1,0 +1,2922 @@
+
+/*google font imports*/
+
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(https://fonts.googleapis.com/css?family=Istok+Web);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
+/*used for handwriting*/
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/******* new h style defaults for all pages 
+overrites bootstrap defaults**********/
+
+/*these are the new defaults for heading
+new size and font set for headings 1, 2 nnd 3*/
+h1 
+{
+    font-size: 50px;
+    font-family: Cabin, serif;
+    letter-spacing: .2px;
+    padding-bottom: 30px;
+}
+
+h2 
+{
+    font-size: 24px;
+    font-family: Cabin, serif;
+}
+
+h3 
+{
+    font-size: 18px;
+    font-family: Cabin, serif;
+}
+
+/******** new genernal font setting for all pages **********/
+
+/*sets standard font settings for all pages
+sets the font tpye colour and size*/
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    color: #666666;
+    font-size: 16px;
+    /*removes left/right scroll vip*/
+    overflow-x: hidden; 
+}
+
+/*this creates a light gray background to break up section*/
+.gray
+{
+    background-color: #f7f7f7;
+    padding-bottom: 30px;
+}
+
+/*************nav styles***************/
+
+/*animates transitions in the nav bar*/
+header .navbar-default nav.navbar
+{
+   -webkit-transition: all 0.4s ease; 
+   transition: all 0.4s ease; 
+}
+
+/*
+    used for the nav header on the home page
+    sets the height of the nav bar with no bg colour
+ ovewritting bootstrap defaults*/
+header .navbar-default .home
+{
+  background-color: transparent;
+  border-radius: 0px;
+  border: none;
+  colour: white;
+  height: 100px;
+ 
+}
+
+/*  sets text color of the brand to white
+the brand is on the left of the nav next to the logo*/
+header .navbar-default .navbar-brand
+{
+    color: white;
+}
+
+/**** smaller nav bar styles Js used to add the shrink class when scrolling */
+
+
+/*
+    used for the nav header on the account pages
+    sets the height of the nav bar with navy bg colour
+ ovewritting bootstrap defaults*/
+header .navbar-fixed-top .account
+{
+    background-color: #2c3e50;
+    border-bottom: 1px solid white;
+    colour: white;
+    height: 100px;
+}
+
+/* afte we scroll 200px the navbar becomes smaller using 
+this class border and color is added see js to how this class is added*/
+header nav.navbar.shrink 
+{
+  min-height: 35px;
+  background-color: #ff4b5a;
+  height: 50px;
+  border-bottom: 1px solid white;
+}
+/*removes padding on shrinked nav*/
+header nav.navbar.shrink .navbar-nav
+{
+    padding: 0px;
+}
+
+/*used to position the brand logo in the top
+left center of the nav bar resizes for the shink class
+used only when scrolled*/
+header nav.navbar.shrink .navbar-brand img
+{
+  height: 30px;
+  margin-top: -5px;
+}
+/*used to position the brand text next to the logo on the shinked */
+header nav.navbar.shrink .navbar-brand h6
+{
+  padding-left: 45px;
+  margin-top: -12px;
+}
+
+/*needed to position hamburger button not using the default style below*/
+header nav.navbar.shrink .navbar-toggle 
+
+/*postions hamburger button  sets its borger colour*/
+header .navbar-default .navbar-toggle 
+{
+    margin-top: 30px;
+    border-color: #ffffff;
+}
+
+/*changes the hamgurger button to white on hover inverse effect*/
+header .navbar-toggle:hover 
+{
+    background-color: #ffffff !important;
+}
+
+/*sets the hamburger button icon bars to white*/
+header .navbar-toggle .icon-bar 
+{
+   background-color: #ffffff !important; 
+}
+/*sets the icon bars color to navy on hover inverse with menu effect*/
+header .navbar-toggle:hover .icon-bar 
+{
+   background-color: #2c3e50 !important; 
+}
+
+/*sets the icon bars color to red on hover inverse with menu effect(shink menu only)*/
+header nav.navbar.shrink .navbar-toggle:hover .icon-bar 
+{
+   background-color: #ff4b5a!important; 
+}
+
+/* sets postioning on the collapsed shrink menu*/
+header nav.navbar.shrink .navbar-collapse.in
+{
+    position: absolute;  
+}
+
+/* aligns text on the collapsed menu*/
+header .navbar-collapse
+{
+    text-align: center;
+    width: 100%; 
+}
+
+/*sets the padding for the menu buttons*/
+header .navbar-default .navbar-nav
+{
+    padding: 30px 0;
+}
+
+
+
+/*keeps the text colour white on hover*/
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover
+{
+    color: white;
+}
+
+/*sets the colour, text and shape of the nav menu links to a pill shape
+adds hover transitions. the background colur is the same as the nav
+so we only see the shape on hover*/
+header nav ul li
+{
+    border-radius: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    -ms-transition: background-color .2s;
+    transition: background-color .2s;
+    margin-top: 25px!important;  
+    
+}
+
+/* repositions bunttons on the scrolling shrink menu*/
+header nav.navbar.shrink ul li
+{
+     margin-top: 15px!important; 
+}
+
+/*sets the padding around menu links to create pill shape*/
+header nav ul li a
+{
+    padding: 5px 15px 5px 15px!important;
+}
+
+/*changes the menu buttons to a different shade of red on hover*/
+header nav ul li:hover
+{
+    background-color: #f82a3b;   
+    color: white;
+}
+/*active link properites set to match buttons*/
+header .navbar-default .navbar-nav>.active>a
+{
+    background-color: #f82a3b;   
+    color: white;
+    border-radius: 10px;
+ }
+ /*active hover buttor colours set to reverse*/
+header .navbar-default .navbar-nav>.active>a:hover
+{
+    background-color: white;   
+    color: #f82a3b;
+    border-radius: 10px;
+ }
+
+/*sets the size to the brand image on page load non-shrink menu*/
+header .navbar-brand > img
+{
+    max-height: 60px;
+}
+/*sets brand text under logo on load screen*/
+header .navbar-brand h6
+{
+    margin-top: 2px;
+}
+
+/*sets the hover colour on the brand text*/
+header .navbar-brand a:hover
+{
+    color: ghostwhite;
+}
+
+/* repositions sign in button on shinked menu*/
+header nav.navbar.shrink .navbar-btn
+{
+    margin-top: 3px !important;
+}
+
+
+/*sets the hover states on the .navbar-brand logo text*/
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus 
+{
+    color: whitesmoke;
+    background-color: transparent;
+}
+
+/*changes the background colours on the collapsed menu
+keeps width to 100% on collapsed menu*/
+@media only screen and (max-width: 767px) 
+{
+    .collapsing, .in 
+    {
+        min-width: 100%!important;
+        background-color: #ff4b5a;
+    }
+    .collapsing ul li a, .in ul li a 
+    {
+        color: #f0f1f1!important;
+    }
+    .navbar-default 
+    {
+        background-color: #ff4b5a !important;
+        min-width: 100%!important;
+    }
+    header nav.navbar .navbar-brand img
+    {
+      height: 30px;
+      margin-top: -5px;
+    }
+    /*used to position the brand text next to the logo on the shinked */
+    header nav.navbar .navbar-brand h6
+    {
+      padding-left: 45px;
+      margin-top: -12px;
+    }
+       header nav ul li
+    {
+
+        font-size:1.3em!important;
+
+
+    }
+}
+/*changes size of menu buttons on medium screen sizes*/
+@media (max-width: 992px) 
+{
+   header nav ul li 
+    {
+        font-size: .7em;
+        margin-left: -10px;
+
+    }
+    
+}
+
+
+/****************log on splash page *********/
+
+/*sets the background color and text color
+orginally only logon page now used in various pages*/
+.logOn
+{
+    background-color: #2a3843 !important; 
+    color: white;
+}
+
+/*sets text colour*/
+.logOn form
+{
+    color: grey;
+}
+/*log on button styles
+size, colors */
+.log_btn
+{
+   min-width: 188px;
+   border-radius: 6px;
+   height: 40px;
+   color: #2c3e50;
+   background-color: #24dc97;
+   border: none;
+}
+/*change bg color on hover*/
+.log_btn:hover
+{
+    background-color: #179b77;
+}
+
+
+/**********************************************
+                homp page
+************************************************/
+
+/*              heroImage styles                  */
+
+/* sets the background image  its height, postion and moves behind nav bar*/
+.heroImage
+{
+    background-image: url('../image/billboard.png');
+    height : 900px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+/*positons all text to the bottom of the hero image*/
+.hero-text
+{
+    margin-top: 670px;
+}
+/* repostions text and image size*/
+@media only screen and (max-width: 760px) 
+{
+    .heroImage
+    {
+       height : 600px;
+    }
+
+    .hero-text
+   {
+      margin-top: 370px;
+   }
+}
+
+/* positions h1 top and bottom lines*/
+.hero-text  h1
+{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+/*Used to display the company name in a block format
+sets font size*/
+.hero-text  h1 span
+{
+    color: white;
+    display: block;
+    font-size: 60px;
+    text-align: center;
+}
+
+/*this is used to style the company slogon udner the company name
+pf the image. This font is always used for the slogon*/
+.hero-text  p
+{
+    color: white;
+    font-size: 10px !important;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+/**            world section is a map with overlayed text       **/
+
+/*this is used to create top and bottom spacing in this section*/
+.world
+{
+    margin: 90px 0px 90px 0px;
+}
+/*centers h1 with the about class used in the world
+section of the home page*/ 
+.world h1
+{
+   text-align: center;
+}
+
+/*repositions text over map for screens of this size*/
+@media (min-width: 767px) 
+{
+    .world h1
+   {
+        margin:  -250px 0px 150px 0px;  
+   }
+}
+
+/*repositions text over map for screens of this size*/
+@media only screen and (max-width: 760px) 
+{
+    .world h1
+   {
+      margin:  -150px 0px 50px 0px; 
+      font-size: 25px;
+   }
+}
+
+/*repositions text over map for screens of this size
+changes font size*/
+@media only screen and (max-width: 500px) 
+{
+    .world h1
+   {
+      margin:  -150px 0px 50px 0px; 
+      font-size: 25px;
+   }
+}
+
+/*repositions text over map for screens of this size
+changes font size**/
+@media only screen and (max-width: 470px) 
+{
+    .world h1
+   {
+      margin:  -110px 0px 10px 0px;  
+      font-size: 22px;
+   }
+}
+
+/*repositions text over map for screens of this size*/
+@media (min-width: 992px) 
+{
+    .world h1
+   {
+      margin:  -280px 0px 200px 0px;  
+   }
+    
+}
+
+/*repositions text over map for screens of this size*/
+@media (min-width: 1200px) {
+    .world h1
+    {
+       margin:  -360px 0px 300px 0px;  
+    }
+}
+
+
+/**************our story section**************/
+
+/*sets margin top and bottom for the company story section*/
+.story
+{
+    margin: 30px 0 30px 0;
+    
+}
+/* tutorial inspired from http://startbootstrap.com/template-overviews/agency/ 
+about section
+
+removes list styles padding and sets postioning for a list item */
+
+.about 
+{
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+/* this is used to insert lines connecting the images to create the appearance
+of a timeline text sits either side of the line the postioning and color as well as
+the width of the line are set here*/
+.about:before 
+{
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 3px;
+    background-color: #ff4b5a;
+    left: 40px;
+    margin-left: -1.5px;
+}
+/*sets height and margins of the list items
+each  list item contains an image div which at is smallest is 50px to match the min-height here*/
+.about>li 
+{
+    margin-bottom: 50px;
+    position: relative;
+    min-height: 50px;
+}
+
+/*this is used to drop the line down the center of the images*/
+.about>li:before,
+.about>li:after 
+{
+    content: " ";
+    display: table;
+}
+/* ensures list items dont overlap on smaller screens 
+keeping the timeline appearance*/
+.about>li:after 
+{
+    clear: both;
+}
+
+/* postions about panel text right of the timeline image
+on smaller displays*/
+.about>li .about-panel 
+{
+    width: 100%;
+    float: right;
+    padding: 0 20px 0 100px;
+    position: relative;
+    text-align: left;
+}
+
+/*.about>li .about-panel:before 
+{
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto
+}
+.about>li .about-panel:after 
+{
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto
+}*/
+
+/* these styles apply to the list images in the timetile
+sets the postioning, size and boarder */
+.about>li .about-image 
+{
+    left: 0;
+    margin-left: 0;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    /*used to ensure sits above linking lines*/
+    z-index: 3;
+    background-color: #fff;
+    color: #f82a3b;
+    border-radius: 100%;
+    border: 7px solid #ff4b5a;
+    text-align: center;
+}
+
+/* this is the text that sits inside the last image div of the timeline*/
+.about>li .about-image h4 
+{
+    font-size: 10px;
+    margin-top: 12px;
+    line-height: 14px;
+}
+
+/*repostions list elements right*/
+.about>li.about-inverted>.about-panel 
+{
+    float: right;
+    text-align: left;
+    padding: 0 20px 0 100px;
+}
+/*.about>li.about-inverted>.about-panel:before 
+{
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto
+}
+.about>li.about-inverted>.about-panel:after 
+{
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto
+}*/
+
+/* adds margin after last list item to create spacing*/
+.about>li:last-child 
+{
+    margin-bottom: 30px;
+}
+/*sets color and font for heading lables*/
+.about h4 
+{
+    margin-top: 0;
+    color: #292929;
+    font-weight: bolder;
+}
+/*removes bootstrap style */
+.about h4.subheading 
+{
+    text-transform: none;
+}
+/*removes bootstrap style */
+.about >p,
+.about >ul 
+{
+    margin-bottom: 0;
+}
+
+/*screens under this size*/
+
+@media (min-width: 768px) 
+{
+    .about:before 
+    {
+        left: 50%;
+    }
+    /*sets spacing and positioning of each list item*/
+    .about>li 
+    {
+        margin-bottom: 100px;
+        min-height: 100px;
+    }
+    .about>li .about-panel 
+    {
+        width: 41%;
+        float: left;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+    /*sets image size for this screen type*/
+    .about>li .about-image 
+    {
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        margin-left: -50px;
+    }
+    /*sets the font attributes for the h4 image text*/
+    .about>li .about-image h4 
+    {
+        font-size: 10px;
+        margin-top:24px;
+        line-height: 10px;
+    }
+    .about>li.about-inverted>.about-panel 
+    {
+        float: right;
+        text-align: left;
+        padding: 0 30px 20px 20px;
+    }
+
+}/*close 768px */
+
+/* sets for screen under 992*/
+@media (min-width: 992px) 
+{
+    /*sets min hight to ensure line goes from each image  */
+    .about>li 
+    {
+        min-height: 150px
+    }
+    /* added padding on list items*/
+    .about>li .about-panel 
+    {
+        padding: 0 20px 20px
+    }
+    /*sets image size for this screen type*/
+    .about>li .about-image 
+    {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px
+    }
+     /* sets margin and font size in the last image */
+    .about>li .about-image h4 
+    {
+        font-size: 16px;
+        margin-top: 20px;
+        line-height: 26px
+    }
+    /*repositions text in last image */
+    .about-image h4 span:nth-child(3) 
+    {
+        padding-left: 13px;
+    }
+
+    /* added padding on list items*/
+    .about>li.about-inverted>.about-panel 
+    {
+        padding: 0 20px 20px
+    }
+    /*heading text centered*/
+    .story
+    {
+        text-align: center;
+    }
+   
+}/*close media 992px*/
+
+/* sets for large displays*/
+@media (min-width: 1200px) 
+{
+    /*sets min hight to ensure line goes from each image  */
+    .about>li 
+    {
+        min-height: 170px
+    }
+    /* creates positioning  left for each list item*/
+    .about>li .about-panel 
+    {
+        padding: 0 20px 20px 100px
+    }
+    /*sets image size for this screen type*/
+    .about>li .about-image 
+    {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px
+    }
+    /* sets margin in the last image */
+    .about>li .about-image h4 
+    {
+        margin-top: 30px
+    }
+    /* creates positioning  right for each list item*/
+    .about>li.about-inverted>.about-panel 
+    {
+        padding: 0 100px 20px 20px
+    }
+    /*repositions text in last image */
+    .about-image h4 span:nth-child(4) 
+    {
+        padding-left: 16px;
+    }
+
+    /*heading text centered*/
+    .story
+    {
+        text-align: center;
+    }
+}/*close media 1200*/
+
+/*centers h1 with the about class used in the about 
+section of the home page*/ 
+.about h1
+{
+    text-align: center;
+}
+
+
+/********* directors section of the homepage`********/
+
+/*centers images and gives images a white border*/
+.directors img
+{
+    margin: auto;
+    border:7px solid #fff;
+}
+
+/*positions h1 text
+this is loacted at the stop of this section and spacing is created here*/
+.directors h1
+{
+    margin: 80px 0px 60px 0px;
+}
+/* the h2 tag is used for the job titles of the directors
+they are set to bold and a darker font color*/
+.directors h2
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: #292929;
+}
+/* sets the h3 size in directors used for the 
+directors name under the job title*/
+.directors h3
+{
+    font-size: 25px;
+}
+.directors p
+{
+    margin: 20px 0px 20px 0px; 
+    text-align: left;
+}
+/* this is used to set the company slogon on the bottom of the 
+grey box in light gray. postioning and font are set here*/
+.directors h4
+{
+    margin: 50px 0px 60px 0px;
+    font-size: 28px;
+    font-family: 'Pacifico', cursive;
+    color: #D3D3D3;
+}
+
+/*positions h1 text
+this is loacted at the stop of this section and spacing is created here*/
+.directors h1
+{
+    margin: 80px 0px 60px 0px;
+    text-align: center;
+}
+/* the h2 tag is used for the job titles of the directors
+they are set to bold and a darker font color*/
+.directors h2
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: #292929;
+    text-align: center;
+}
+/* sets the h3 size in directors used for the 
+directors name under the job title*/
+.directors h3
+{
+    font-size: 25px;
+    text-align: center;
+}
+/*postions and aligns yexy about each director
+under director heading*/
+.directors p
+{
+    margin: 20px 0px 20px 0px; 
+    text-align: left;
+}
+/* this is used to set the company slogon on the bottom of the 
+grey box in light gray. postioning and font are set here*/
+.directors h4
+{
+    margin: 50px 0px 60px 0px;
+    font-size: 28px;
+    font-family: 'Pacifico', cursive;
+    color: #D3D3D3;
+    text-align: center;
+}
+
+/********* what we offer section of the homepage`********/
+
+/*positions section heading*/
+.what-we-offer h1
+{
+  margin: 70px 0px 50px 0px;
+}
+/*styles the font awesome icons at top of home page
+size, color and position set*/
+.what-we-offer i 
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ff4b5a;
+
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    /*aligns center*/
+    vertical-align: middle;
+    /*postions center*/
+    padding-top:  25px;
+    font-size: 100px;
+}
+/*sets font size for this icon*/
+.fa-globe
+{
+    font-size: 130px!important;
+}
+/*sets hover state colour reversal for icons*/
+.what-we-offer i:hover 
+{
+    background-color: white;
+
+    color: #ff4b5a;
+}
+/*sets h2 colour to red in this section*/
+.what-we-offer h2
+{
+    color: #ff4b5a;
+}
+/*creates space at the end of this section*/
+.what-we-offer p
+{
+    margin-bottom: 50px;
+}
+
+/* quote is the speach bubbles in the testimonials part of the home page*/
+
+/*creates general shape and sets red gradient of speech bubble*/
+.quote
+{
+    position: relative;
+    padding: 15px;
+    margin: 1em 0 3em;
+    color: #fff;
+    background: #ff4b5a;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#f82a3b), to(#ff4b5a));
+    background: -moz-linear-gradient(#f82a3b, #ff4b5a);
+    background: -o-linear-gradient(#f82a3b, #ff4b5a);
+    background: linear-gradient(#f82a3b, #ff4b5a);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-left: none;
+}
+/*create a quate at the end ot the speach bubble*/
+.quote:before 
+{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 60px;
+    border: 0;
+    border-right-width: 30px;
+    border-bottom-width: 20px;
+    border-style: solid;
+    border-color: transparent #ff4b5a;
+    display: block;
+    width: 0;
+}
+/*blends quote mark with the bubble shape*/
+.quote:after
+{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 80px;
+    border: 0;
+    border-right-width: 10px;
+    border-bottom-width: 20px;
+    border-style: solid;
+    border-color: transparent #fff;
+    display: block;
+    width: 0;
+
+}
+/*this is the client image under the speech bubble
+sets the image size and border and position*/
+.clients
+{
+    height: 90px;
+    width: 90px;
+    margin: -100px 0px 50px 300px;
+    border: 2px solid #eee;
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) 
+{
+    /*repositions client image*/
+    .clients
+    {
+        margin: -100px 0px 50px 200px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) 
+{
+    /*repositions client image*/
+    .clients
+    {
+        margin: -100px 0px 50px 320px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) 
+{
+    /*repositions client image*/
+    .clients
+    {
+        margin: -100px 0px 50px 580px;
+    }
+}
+
+ /* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) 
+{
+    /*repositions client image*/
+    .clients
+    {
+        margin: -100px 0px 50px 180px;
+    }
+}
+
+/*large screen*/
+@media (min-width: 1200px) 
+{
+    /*repositions client image*/
+    .clients
+    {
+        margin: -100px 0px 50px 250px;
+    }
+}
+/*creates space and the start and end of this section*/
+.tesimonials
+{
+    margin-top: 50px;
+    margin-bottom: 50px ;
+}
+
+/*creates space at the top of the branch section*/
+.branch h1
+{
+    margin-top: 50px;
+    
+}
+/* creates space between map and bottom text and space at the end of this section*/
+.branch h2
+{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    
+}
+
+/*sets height size of map*/
+.map
+{
+    height: 400px;
+}
+
+/* space at top and bottom of this section*/
+.about-us
+{
+    margin: 50px 0px 50px 0px;
+}
+/************ devices*****************************************/
+
+/* space at top and bottom of this section*/
+.device h2
+{
+    margin: 50px 0px 50px 0px;
+}
+/*reposrtions heading with extra spacing*/
+.device h1
+{
+    margin: 90px 0px 40px 0px;
+}
+
+/************ stocks*****************************************/
+/* space at top and bottom of this section*/
+.ourst
+{
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+/*repositions h2 to algin with images */
+.ourst h2
+{
+    margin-top: 35px;
+}
+/*spacing between heading and carousel*/
+.ourst h1
+{
+    margin-bottom: 30px;
+}
+/*positions right of h2*/
+.right-img
+{
+    padding-left: 120px;
+}
+/*positions left of h2*/
+.left-img
+{
+    padding-right: 120px;
+}
+
+/*medium devices*/
+@media only screen and (max-width : 979px) 
+{
+    /*repositions right of h2*/
+    .right-img
+    {
+        padding-left: 20px;
+    }
+    /*repositions left of h2*/
+    .left-img
+    {
+        padding-right: 20px;
+    }
+    /*repositions h2, sets new font size*/
+    .ourst h2
+    {
+        font-size: 25px;
+        margin-top: 25px;
+        margin-bottom: 100px;
+    }
+}
+/*small devices*/
+@media only screen and (max-width : 767px) 
+{
+    /*repositions h2, sets new font size*/
+    .ourst h2
+    {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+}
+
+
+
+/****************************************************************************
+                    close homepage styles
+*****************************************************************************/
+
+/****************************************************************************
+                        Log on Screen
+*****************************************************************************/
+
+/*used on the log on screen to vertical canter all content*/
+.vertical-center
+{
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+/*used to center text*/
+.center-all-content
+{
+    text-align: center;
+}
+
+/* creates a stacked form for the log on screen
+creates border for input box */
+.myStack input
+{
+    padding: 0.5em 0.6em;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* sets border on top corners of the top input box removes margin */
+.stackStart
+{
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+}
+
+/* sets border on bottom corners of the top input box removes margin 
+moves up 2 px to meet top input box*/
+.stackEnd
+{
+    top: -2px;
+    border-radius: 0 0 4px 4px;
+    margin-bottom: 30px;
+}
+
+/* reposition elements with the sign class*/
+.sign 
+{
+    margin-top: 40px;
+}
+
+
+/****************************************************************************
+                        Close Log on Screen
+*****************************************************************************/
+
+/*****************button styles********************/
+
+/*used on the sign in and log out buttons
+sets button with no bg colour, with white text and a 
+white border*/
+.border_btn
+{
+    margin-top: 30px;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 3px solid white;
+    color: white;
+    width: 90px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*sets hover state colours button white, and text colour navy*/
+.border_btn:hover
+{
+    background-color: white !important;
+    border: 3px solid white;
+    color: #2c3e50;
+   
+}
+
+/*red button styles*/
+.myButton 
+{/* sets color, shape, font,
+	behaviours*/
+    background-color: #ff4b5a;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    /* border-radius: 8px; */
+    /* display: inline-block; */
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: Verdana;
+    font-size: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+/*sets button hover color to change*/
+.myButton:hover 
+{
+    background-color: #f82a3b;
+    color:white;
+    text-decoration:  none;
+}
+
+/*sets active state*/
+.myButton:active 
+{
+    position: relative;
+    top: 1px;
+}
+/***************close button styles*************/
+
+/*adds a margin top*/
+.top
+{
+    margin-top: 30px;
+}
+
+
+
+/****************************************************************************
+                        my account page
+*****************************************************************************/
+
+
+/* this is the top row under the nav bar 
+sets the height and shape of the divs inside this 
+hold the 
+*/
+
+/* this is the divs that hold the daskboard coloured boxes at the start of this page r2
+the height, text colour is set to white and a border radius is set*/
+.summary > div 
+{
+    height: 220px;
+    color: white;
+    border-radius: 6px;
+}
+/* this is the the top left blue box, the heigth is 22o px filling its outer div 
+as to why there is no margin top and a matching border radius*/
+.portfolio_value
+{
+    background-color: #0eadd4;
+    height: 220px;
+    margin-top: 0px;
+    border-radius: 6px;
+}
+/* removes the margin top from h1s in the daskboard divs**/
+.portfolio_value h1, .time h1, .myStock h1
+{
+    margin-top: 0px;
+   
+}
+/* this is the the top left yellow box, the heigth is 220px filling its outer div 
+ with a matching border radius*/
+.myStock
+{
+    height: 220px;
+    background-color: #ffb301;
+    border-radius: 6px;
+}
+/*this is used on buy buttons 
+height color and button shape set*/
+.buy
+{
+    height: 100px;
+    background-color: #00a93f;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: white;
+}
+/*hover colour swap for buy button*/
+.buy:hover
+{
+    background-color: white;
+    color: #00a93f;
+}
+/*this is used on sell buttons 
+height, color and button shape set*/
+.sell
+{
+    height: 100px;
+    background-color: #df2d47;
+    border-radius: 6px;
+    color: white;
+}
+/*hover colour swap for sell button*/
+.sell:hover
+{
+    background-color: white;
+    color: #df2d47;
+}
+/*sets height and with to 90% for the details divs*/
+.details
+{
+    width: 90%;
+    max-height: 90%
+}
+/*this sets the name lables in the details tables to bold*/
+.details td:nth-child(odd) 
+{
+    font-weight: bold;
+    width: 60%;
+    height: 40px;
+}
+/*located right
+sets the color to purple color and white text
+size and style to match other dash items*/
+.time
+{
+    background-color: #9e4b9d;
+    height: 220px;
+    margin-top: 0px;
+    border-radius: 6px;
+}
+/* dask items padding*/
+.time , .myStock, .portfolio_value
+{
+    margin-top: 0px;
+    padding: 10px 20px 0px 20px;
+}
+
+/*sets subset colour and font styles*/
+.time h1 subset
+{
+    display: block;
+    font-size: .6em;
+    color: ghostwhite;
+    font-style: oblique;
+}
+
+/*sets style of details boses, my deails branch and news*/
+.det
+{
+    border-radius: 6px;
+    background-color: whitesmoke;
+    color: #292929;
+    padding: 30px;
+
+}
+/*class used for extra top margins for rows*/
+.topper
+{
+    margin-top: 30px;
+}
+
+/*div that holds graph on accounts page
+sets colour and padding to postion the graph image*/
+.imageHolder
+{
+    border-radius: 6px;
+    background-color: #34495e;
+    padding:0px 30px 30px 30px;
+}
+
+/* heading style for stock graph
+sets colour and bg colour positions and styles at top of div*/
+.title
+{
+    margin: 0 -30px 20px -30px;
+    padding: 10px 10px 10px 20px;
+    background-color: #454954;
+    border-top-left-radius: 6px;
+    border-top-Right-radius: 6px;
+}
+/*removes border from buttons*/
+button
+{
+    border: none;
+}
+
+/* this is an icon to sell
+its red and 30px, positioning set here */
+.sell_btn
+{
+    color: #ff4b5a;
+    font-size: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;   
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*sets bg colour to white*/
+.open
+{
+    background-color: white;
+}
+/*changes hover colour to gray in tables*/
+tr:hover .open
+{
+    background-color: #E5E5E5;
+}
+/*changes hover colour to gray in tables*/
+tr:hover .buy_btn
+{
+    background-color: #E5E5E5;
+}
+/*changes hover colour to gray in tables*/
+tr:hover .sell_btn
+{
+    background-color: #E5E5E5;
+}
+/*reverses color on hover*/
+.sell_btn:hover
+{
+    color: white;
+    background-color: #ff4b5a!important; 
+}
+/* this is an icon to buy
+its green and 30px, positioning set here */
+.buy_btn
+{
+    color: #24dc97;
+    font-size: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 6px;    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/*reverses color on hover*/
+.buy_btn:hover
+{
+    color: white;
+    background-color: #24dc97!important; 
+}
+
+/*large scrrens*/
+@media only screen and (min-width : 1200px) 
+{
+    /*repositions image */
+    .imageHolder ul
+    {
+        padding-left: 0px;
+
+    }
+    /*spans text display under  each other to fit div*/
+    .imageHolder ul li span
+    {
+        display: block;
+    }
+}
+
+/*smaller than larger*/
+@media only screen and (max-width : 1199px) 
+{
+    /*repositions image */
+    .imageHolder ul
+    {
+        padding-left: 0px;
+
+    }
+    /*spans text display under  each other to fit div*/
+    .imageHolder ul li span
+    {
+        display: block;
+    }
+    /*hides second span*/
+    .imageHolder ul li span:nth-child(2)
+    {
+        display: none;
+    }
+    /*hides third span*/
+    .imageHolder ul li span:nth-child(3)
+    {
+        display: none;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1155px) 
+{
+    /* sets new font size and repostions text*/
+    .sell h1,.buy h1
+    {
+        font-size: 40px;
+        padding-top: 8px;
+    }
+    /*moves market tag above time */
+    .time h3
+    {
+        margin-top: -60px;
+    }
+    /*displays in block*/
+    .myStock h3 span
+    {
+       display: block; 
+    }
+    /*sets table font size*/
+    .myStock table
+    {
+        font-size: 18px;
+    }
+    /* makes lables bold*/
+    .myStock table td:nth-child(1) 
+    {
+        font-weight: bolder;
+    }
+    /*moves right 20px of lables*/
+    .myStock table td:nth-child(2) 
+    {
+    padding-left: 20px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) 
+{
+    /*moves market tag above time */
+    .time h3
+    {
+        margin-top: -60px;
+    }
+    .imageHolder ul li span:nth-child(2)
+    {
+        display: none;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) 
+{
+    /*algins text center*/
+    .time, .portfolio_value, .sell, .buy, .myStock
+    {
+        text-align: center;
+    }
+    /*moves market tag above time */
+    .time h3
+    {
+        margin-top: -60px;
+    }
+    /* sets new div size and repostions text*/
+    .sell, .buy
+    {
+        height: 110px;
+        margin: 0;
+        padding-top: 10px
+    }
+    /*centers content*/
+    .myStock table
+    {
+        margin: auto;
+        padding: auto;
+    }
+    /*moves text left*/
+    .myStock table td
+    {
+        text-align: left;
+    }
+    /*crents extra padding on second column text*/
+    .myStock table td:nth-child(2) 
+    {
+    padding-left: 20px;
+    }
+    /*displays inline*/
+    .imageHolder ul li 
+    {
+        display: inline-block;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) 
+{
+    /*algins text center*/
+    .time, .sell, .buy, .myStock, .portfolio_value, .det
+    {
+        border-radius: 0px;
+        text-align: center;
+    }
+    /*changes size to remove gap between these items*/
+    .sell, .buy
+    {
+        height: 110px;
+        margin: 0;
+
+    }
+    /*displays list items  in a block*/
+    .imageHolder ul li 
+    {
+        display: block;
+    }
+}
+
+/*removes list style*/
+.imageHolder ul
+{
+    list-style: none;
+
+}
+
+
+/*removes margins mainly used on text*/
+.nomar
+{
+    margin: 0px;
+}
+
+/*        used for graph labels         */
+
+/*sets bg to green*/
+.green
+{
+    background-color: #4eb86e;
+}
+/*sets bg to orange*/
+.orange
+{
+    background-color: #d15527;
+}
+/*sets bg to red*/
+.red
+{
+    background-color: #e64b3a;
+}
+/*sets the  text color, text position and border on these label items*/
+.green, .red, .orange
+{
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+/*used to create a red down arrow-*/
+.arrow-down_red 
+{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 14px 5px 0 5px;
+    border-color: #ff4b5a transparent transparent transparent;
+}
+/*used to create a green up arrow-*/
+.arrow-up_gr 
+{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 14px 5px;
+    border-color: transparent transparent #24dc97 transparent;
+}
+
+/*used to create a green up arrow hover-*/
+.arrow-up_gr:hover
+{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 22px 10px;
+    border-color: transparent transparent #24dc97 transparent;
+}
+/*used to create a red down arrow hover-*/
+.arrow-down_red:hover
+{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 22px 10px 0 10px;
+    border-color: #ff4b5a transparent transparent transparent;
+}
+
+/*      google graph styles account page bottom     */
+/*makes this div responsive by seting the width to 100%
+*/
+#visualization 
+{
+    width:100%;
+    height: 500px;
+    margin-bottom:  40px;
+        
+}
+
+/* sets the fill on the google graph svg*/
+svg rect
+{
+    fill: #34495e;
+    
+}
+/* doesnt work
+#visualization g:first-child
+{
+    padding-top: 100px;
+}*/
+
+/* sets spaceing before the footer as this is the last item on the account page*/
+.chart
+{
+    margin-bottom: 30px;
+    margin-left: 10px;  
+}
+/* the svg sits in this div so here we match the bg colour with the svg
+and add a bit of padding at the bottom as the labels wihere to close to the bottom*/
+.inner
+{
+    background-color: #34495e;
+    border-radius: 6px;
+    padding-bottom: 20px;
+}
+/*this is the title  so here we add a bit of padding and a color
+it is positioned in the far top of this div this is why the border radius matches*/
+.chart h1
+{
+    
+    padding: 10px 10px 10px 10px;
+    background-color: #454954;
+    border-top-left-radius: 6px;
+    border-top-Right-radius: 6px;
+}
+/* creates top spacing*/
+.custsto
+{
+    margin-top: 30px;
+}
+
+/************styled used by all forms***************/
+
+
+
+/*backgtound colour used for form pages*/
+.forms-bg
+{
+    background: rgba(19, 35, 47, 0.9);
+}
+
+/*all forms wrapped in this outer div
+max width 600px and content centered*/
+.form 
+{
+    font-family: 'Titillium Web', sans-serif; 
+    max-width: 600px;
+    margin: auto;
+
+}
+
+/*used to postion lables start postion to inside the 
+input box
+sets font size and transitions for lables*/
+.form label 
+{
+    position: absolute;
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    left: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 22px;
+}
+/*sets the colour and position for the required */
+.form label .req 
+{
+    margin: 2px;
+    color: #1ab188;
+}
+
+/*
+this class is added by the js to move the
+lable when input is in the box so the content doesnt 
+overlap. resizes text
+*/
+.form label.active 
+{
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    left: 20px;
+    font-size: 14px;
+}
+
+/* this is used to move a lable below a select box
+overites previous styles
+*/
+.form label.selectBelow 
+{
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    left: 20px;
+    font-size: 14px;
+    colour: white;
+}
+
+/*repostions the lable to the right of the user input*/
+.form label.radio
+{
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    left: 190px;
+    font-size: 14px;
+}
+
+/*repostions the lable to the right of the user input*/
+.form label.radioGen
+{
+   
+    left: 230px;
+    font-size: 14px;
+}
+
+/*removes required tag when a text feild has user input*/
+.form label.active .req 
+{
+    opacity: 0;
+}
+
+/*sets the colour of the text to white of
+a label when the highlight tag is added*/
+.form label.highlight 
+{
+    color: #ffffff;
+}
+
+/*sets the errors colors to green and posititons the error*/
+.error 
+{
+    color: #1ab188;
+    padding-left: 20px;
+    font-size: 12px;
+
+}
+
+/* used to style inputs textboxes on all forms with the .inbox class
+postions, sets size, font and colours*/
+.form .inbox
+{
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+/*selts the height of the select option*/
+.form select option
+{
+    height: 60px;
+}
+
+/* sets the border color of input on focus or active*/
+.form input:focus,
+.form textarea:focus, .form select:focus
+{
+    outline: 0;
+    border: 2px solid #1ab188;
+}
+/*sets the border on a textarea*/
+.form textarea 
+{
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}
+
+/*adds a margin at the bottom of elements with the feild class*/
+.field
+{
+    margin-bottom: 40px;
+}
+
+/* sets all properties for buttons with the .button class
+    used on forms
+*/
+.button 
+{
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #24dc97;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+
+/*sets button hover and focus change color to green*/
+.button:hover,
+.button:focus 
+{
+    background: #179b77;
+}
+
+/*sets button to 100% of its div and display under each other*/
+.button-block 
+{
+    display: block;
+    width: 100%;
+}
+/*sets form h1 colour*/
+.form h1
+{
+    color: rgba(255, 255, 255, 0.5);
+}
+/*sets form p colour and spacing padding
+this always sits at bottom of form*/
+.form p
+{
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 70px;
+}
+/*cretaes spacing between the submit button and the file upload box*/
+.file
+{
+    margin-bottom: 70px;
+}
+
+/*used to resize select boxes to match input boxes*/
+.form select
+{
+    /*same as other input boxes*/
+    height: 43px!important;
+    border-radius: 0px!important;
+}
+/**********end form styles*****************/
+
+/*     main table styles on the sfaff enditing pages   */
+
+/*this is used to overrite the basic syles from the footable library
+important tag needed
+this is the style for the table header 
+*/
+.footable thead th
+{
+    color: white!important;
+    vertical-align: middle!important;
+    text-align: center!important;
+    border-bottom: 1px solid #cccccc!important;
+    background-color: #24dc97!important;
+    font-weight: bold;
+    height: 80px!important;
+}
+/* sets footable table bg color, text color and height */
+.footable tbody tr
+{
+    color: #666666!important;
+    height: 80px!important;
+    background-color: white!important;
+}
+
+/*sets a table row hover colour to gray*/
+.footable tbody tr:hover
+{
+    background-color: 	#E5E5E5!important;
+}
+
+/* postions table text and adds borders */
+.footable td
+{
+    vertical-align: middle!important;
+    text-align: center!important;
+    border-bottom: 1px solid #cccccc!important;
+}
+
+/*removes footable borders*/
+#filter
+{
+    background-color: none;
+}
+
+/* */
+.footable>tfoot>tr>th, .footable>tfoot>tr>td
+{
+    background-color: #24dc97!important;
+    height: 80px!important;
+}
+
+.table-row
+{
+    padding: 0;
+    /* margin-top: 30px; */
+}
+
+/* styles table search input box to match form input boxes
+width and height to fill div*/
+.search
+{
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+/* sets green border on focused input boxes*/
+input:focus
+{
+    outline: 0;
+    border: 2px solid #1ab188;
+}
+/*postions lable for search boxes*/
+.search_lab
+{
+    padding: 10px 0px;
+}
+/*positions add labels*/
+.add label
+{
+   padding: 23px 0px;
+}
+/*creates a margin top in inner divs of the add class*/
+.add > div
+{
+    margin-top: 3px;
+}
+/*mobile tabet*/
+@media only screen and (max-width: 766px) 
+{
+    /*moves heading with the  push class*/
+    .push h1
+    {
+        padding-left: 15px;
+    }
+    /*sets padding and margin for the add class*/
+    .add 
+    {
+        margin-top: -80px;
+        padding-left: 300px;
+    }
+    /*hides add label*/
+    .add label
+    {
+       display: none;
+    }
+    /*creates a margin bottom in inner divs of the add class*/
+    .add > div
+    {
+        margin-bottom: 30px;
+    }
+}
+/*phone screens*/
+@media only screen and (max-width: 470px) 
+{
+    /*moves heading with the  push class*/
+    .push h1
+    {
+        padding-left: 15px;
+    }
+    /*sets padding and margin for the add class*/
+    .add 
+    {
+        margin-top: -80px;
+        padding-left: 220px;
+    }
+    /*hides add label*/
+    .add label
+    {
+       display: none;
+    }
+    /*creates a margin bottom in inner divs of the add class*/
+    .add > div
+    {
+        margin-bottom: 30px;
+    }
+}
+
+/*adds top margin to this class*/
+.mar_top
+{
+    margin-top: 30px;
+}
+/*doesn't work'*/
+table .footable  .rad 
+{
+    border-radius: 6px!important;
+}
+/*sets table arrows to bg color*/
+.footable>tfoot .pagination ul>li.disabled>a 
+{
+    color: #2a3843;
+}
+
+
+/*******************************************************
+
+                    footer styles
+
+*******************************************************/
+
+/*sets the background and text color of the footer*/
+footer
+{
+    background-color: #24dc97;
+    color: white;
+}
+/*removes the list styles  from the footer lists
+and applys a margin under it. This list is used to contain
+3 social media icons*/
+footer ul
+{
+    list-style-type: none;
+    margin: 0px 0px 100px 0px;
+    padding: 0;
+}
+
+/*sets the social media icon spacing and displays in a line
+as aposed to under each othe rlike a standard list*/
+.social-icons li 
+{
+    display: inline;
+    padding-left: 18px;
+}
+
+/* the list contain i tags with the aqsome font social media icons
+sets the width, color, size and border*/
+.social-icons i 
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    margin-top: 100px;
+}
+
+/* sets the hover of the social media icons to inverse
+using the footers green.*/
+.social-icons i:hover 
+{
+    background-color: white;
+    color: #24dc97;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    transition: 0.6s;
+}
+
+/*postions the text h1 aligns with social media icons*/
+.foot-text h1
+{
+    text-align: center;
+    margin: 100px 0px 50px 0px!important;
+}
+
+/*resizes the  fotter on mobile*/
+@media (max-width: 500px) 
+{  
+    /*resized and repostions social media icons*/
+    .social-icons i 
+    {
+        margin-top: 50px;
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+    }
+    /*sets footer position and height*/
+    .footer 
+    {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 310px;
+    }
+    /*changes h1 sixe and position */
+    .foot-text h1
+    {
+       font-size: 28px;
+       margin: -80px 0px 30px 0px!important;
+    }
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+/*sets page min height*/
+html 
+{
+    position: relative;
+    min-height: 100%;
+}
+/* body margin bottom to match the footer height*/
+body 
+{
+  /* Margin bottom by footer height */
+  margin-bottom: 350px;
+}
+/* footer height and position*/
+.footer 
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 350px;
+}
+
+
+/*large screens*/
+@media (max-width: 1199px) 
+{ 
+    /* body margin bottom to match the footer height*/
+    body 
+    {
+        /* Margin bottom by footer height */
+        margin-bottom: 450px;
+    }
+    /* footer height and position*/
+    .footer 
+    {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 450px;
+
+    }
+    /*repositions fotter h1 text*/
+    .foot-text h1
+    {
+        margin: -80px 0px 50px 0px!important;
+    }
+    
+}
+/*mobile*/
+@media (max-width: 600px) 
+{ 
+    /* body margin bottom to match the footer height*/
+    body 
+    {
+        /* Margin bottom by footer height */
+        margin-bottom: 400px;
+    }
+    /* footer height and position*/
+    .footer 
+    {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 400px;
+    }
+    /*repositions fotter h1 text*/
+    .foot-text h1
+    {
+       font-size: 28px;
+       margin: -80px 0px 30px 0px!important;
+    } 
+}
+
+
+/*removes white space from right of the page in firefox*/
+.row 
+{
+  margin: auto;
+  padding:auto;
+  
+}
+
+
+/************  cart styles ******************/
+
+/*sets b tags to bold and font color*/
+b
+{
+    font-weight: bolder;
+    color: #292929;
+}
+/*sets item images to center and 100px width*/
+.item img
+{
+    max-width: 100px;
+    margin: auto;
+}
+/*sets carousel item box styles color, border, positioning*/
+.item
+{
+    background: #f7f7f7;
+    padding: 30px 0px;
+    display: block;
+    margin: 15px;
+    color: #666666;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    border: 1px solid #777777;
+}
+
+/*sets hover on button-block*/
+.button-block:hover
+{
+    color:white;
+    text-decoration: none;
+}
+/*places border top and bottom around products(stock ) view on cart page*/
+.products
+{
+    border-top: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) 
+{
+    /*moves the stock name under the Stock Name
+    heading on smaller screens to keep all 
+    items the same size and format*/
+    .item h3 span
+    {
+        display: block;
+    }
+}
+
+/* used to color the top of the screen navy on pages with white bg ie cart pages*/
+.topnavbg
+{
+
+    height: 130px;
+    background-color: #2a3843;
+}
+
+/*************************************************************
+                    View Stock Page
+*************************************************************/
+
+/*spacing between stock buttons*/
+.stock_but > div
+{
+    margin-top: 30px;
+}
+
+/*sets border and size of stock image*/
+.stologo
+{
+   background-color: whitesmoke;
+   border-radius: 6px;
+   height: 250px;
+   border: 2px solid white;
+}
+/*repositions th esearch bar*/
+.stock-cust-search
+{
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+/*repositions header*/
+.viewstock-custhead
+{
+    margin-top: 60px;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) 
+{
+    /* matches stock table with bottom of stock image*/
+    .stock-tab
+    {
+        margin-top: 60px;
+    }
+    /*aligins buttons with the bottom of stock data*/
+    .stock_but 
+    {
+        margin-top: 70px;
+    }
+
+
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) 
+{
+    /* matches stock table with bottom of stock image*/
+    .stock-tab
+    {
+        margin-top: 60px;
+    }
+    /*algins buttons with the bottom of stock data*/
+    .stock_but 
+    {
+        margin-top: 70px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) 
+{
+    /*repostions stock data as no image on this size device*/
+    .stock-tab
+    {
+        margin-top: 0px;
+    }
+    /*repostions stock buttons to algin bottom of stock data*/
+
+    .viewstock-custhead h1
+    {
+        font-size: 26px;
+    }
+    /*algins buttons with the bottom of stock data*/
+    .stock_but 
+    {
+        margin-top: 15px;
+    }
+    /* repositions search bar*/
+    .stock-cust-search
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) 
+{
+    /*moves it button back 15 px*/
+    .stock-tab
+    {
+        margin-left: 15px;
+    }
+
+    /*aglins button with stock data*/
+    .stock_but 
+    {
+        margin-top: 130px;
+        margin-left: -15px;
+    }
+
+}
+    
+/*adds spacing between the 2 main sections of this page*/
+.custstotop
+{
+    margin-top: 50px;
+}
+
+/*************************************************************
+                    Close View Stock Page
+*************************************************************/
+
+/*************************************************************
+                   View Branch Page
+*************************************************************/
+
+/*reposititons search input box for the customer finder*/
+.brcust input
+{
+    height: 40px;
+    margin-top: 30px;
+    
+}
+
+/*moves the customer table to create spacing*/
+.brcust
+{
+    margin-bottom: 20px;
+}
+
+/* adds additional spacing between rows of this page`*/
+.brcustomers
+{
+    margin-top: 60px;
+}
+
+/*styles the view custoemr heading*/
+.brcustomers h1
+{
+    font-size: 38px;
+    margin-top: 24px;
+}
+
+/*************************************************************
+                    Close View Branch Page
+*************************************************************/
+
+
+/*moves footer down 70px*/
+.pushfoot
+{
+    margin-bottom: 70px;
+}
+
+/*pushes content down away from nav */
+.push
+{
+    margin-top:130px;
+}
+
+/*************************************************************
+                    View Cart Page
+*************************************************************/
+
+/* tumbnail image in cart style 
+height and position set*/
+.tum-logo img
+{
+    height: 70px;
+    padding: 10px;
+    border:1px solid #666666;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 3px;
+}
+/* positions h1 text in cart items*/
+.add-2-cart h1
+{
+   padding: 30px 25px 0px 0px; 
+   margin: 20px 20px;
+}
+/* line colour to seperate cart items*/
+.add-2-cart hr
+{
+   border-top: 1px solid #666666;
+   
+}
+
+/*cart h2 positioning*/
+.add-2-cart h2
+{
+    margin-top: 35px;
+
+}
+
+/*medium screens*/
+@media only screen and (max-width : 979px) 
+{
+    /*cart h2 repositioning*/
+    .add-2-cart h2
+    {
+        font-size: 25px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+}
+
+/*tablets */
+@media only screen and (max-width : 767px) 
+{
+    /*cart h2 repositioning*/
+    .add-2-cart h2
+    {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+}
+
+/* sets border and size for preview cart block*/
+.preview-cart
+{
+    border: 1px solid #666666;
+    height: 150px;
+    margin: 30px 0px 40px 0px;
+    border-radius: 6px;
+}
+
+/*sets logo style in preview cart size bg color and positioning */
+.tum-logo
+{
+    padding-left: 20px;
+    padding-top: 35px;
+    font-size: 24px;
+    color: #179b77;
+    font-weight: 900;
+    background-color: #fafafa;
+    height: 100%;
+    border-radius: 6px;
+    border-right: 1px solid #666666;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+/*sets icon link styles in preview cart*/
+.tum-logo > div i
+{
+    margin-right: 10px;
+
+    color: #179b77;
+    padding-left: 0;
+    margin-left: -15px;
+   
+}
+
+/*sets colour, height  of this div*/
+.new-cart
+{
+    background-color: #f3f3f3;
+    height: 100%;   
+}
+
+/* sets the size of the buttons div and bg colour*/
+.preview-btns
+{
+    background-color: #f3f3f3;
+    height: 100%;
+    border-top-right-radius:6px;
+    border-bottom-right-radius: 6px;
+    padding-top: 20px;
+    
+}
+/* postions paragragrs in this div to algin with other div text*/
+.preview-btns p
+{
+    margin-top: 30px;
+}
+
+/*buy button position*/
+.preview-btns .buy_btn
+{
+    margin-right: 20px;
+}
+/*creates span with span elements in the cart preview*/
+.new-cart span
+{
+    margin-left: 20px;
+}
+
+/*under larges display*/
+@media only screen and (max-width : 1199px) 
+{
+    /* resizes font*/
+    .tum-logo
+    {
+        font-size: 18px;
+    }
+}
+
+/*tablets*/
+@media only screen and (max-width : 767px) 
+{
+    /* increases height*/
+    .preview-cart
+    {
+        height: 200px;
+    }
+    /*adds border as left div droped on this display so it now blends with outher div*/
+    .new-cart
+    {
+        border-top-left-radius:6px;
+        border-bottom-left-radius: 6px;
+    }
+    /* removes margin previously set as itme now on a new line*/
+    .new-cart span
+    {
+        margin-left: 0px;
+    }
+}
+/*mobile*/
+@media only screen and (max-width : 400px) 
+{
+    /*makes font small*/
+    .smaller
+    {
+        font-size: 12px;
+    }
+    /*repositions buttons*/
+    .preview-btns .buy_btn
+    {
+        margin-right: 5px;
+    }
+}
+/* sets a border on top of each cart item*/
+.cart-item
+{
+    border-top: 1px solid #666666;
+    height: 100px;   
+}
+
+/*styles image logos in the cart*/
+.cart-item img
+{
+    height: 60px;
+    padding: 10px;
+    border:1px solid #666666;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 3px;
+    margin: 20px;
+}
+/* adds spacing to span(prices)*/
+.cart-item span
+{
+    padding-left: 20px;
+}
+/*repositonions text to align with image*/
+.cart_text
+{
+    margin-top: 40px;
+}
+/*repositonions buttons to align with text*/
+.cart_btn
+{
+    margin-top: 30px;
+}
+
+/*tablets*/
+@media only screen and (max-width : 767px) 
+{
+    /*moves cart images*/
+    .cart-item img
+    {
+        margin: 20px 0px 20px -15px;
+    }
+    /*moves cart text*/
+    .cart_text
+    {
+        margin-top: 25px;
+    }
+    /*positions labels in block to fit div on smaller screens*/
+    .cart_text strong
+    {
+        display: block;
+    }
+    /*positions labels in block to fit div on smaller screens*/
+    .cart_text span 
+    {
+        display: block;
+        padding-left: 0px;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width : 480px) 
+{
+    /*moves cart images*/
+    .cart-item img
+    {
+        margin: 20px 0px 20px -25px;
+    }
+}
+
+/* cart total section color and borders set */
+.bootom
+{
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+    margin-bottom: 100px;
+    background-color: #fafafa;
+}
+
+/*postions buttons inline with text*/
+.cart-totalerbtn
+{
+    margin-top: 30px;
+}
+
+/*used to idenify cart total price bottom of cart page*/
+.cart-totaler h1
+{
+    margin-top: 40px;
+}
+
+/* medium screnns repositions add remove buttons*/
+@media only screen and (max-width : 991px) 
+{
+    /*repositionions cart_btn*/
+    .cart_btn
+    {
+        margin-top: 10px;
+    }
+    /*repositionions button total*/
+    .cart-totalerbtn
+    {
+    margin-top: 55px;
+    }
+}
+
+/*tablets*/
+@media only screen and (max-width : 767px) 
+{
+    /*repositionions button total*/
+    .cart-totalerbtn
+    {
+        margin-top: 0px;
+        margin-bottom: 60px;
+    }
+}
+
+/*************************************************************
+                    Close View Cart Page
+*************************************************************/
+
+/*text colour and settings for modal headers*/
+.modal-header h4
+{
+    color: #666666;
+    margin-left: 20px;
+    font-size: 26px;
+  
+}
+
+/* tab-lables positioning*/
+.tab-lab
+{
+    margin-top: 30px!important;
+    margin-bottom: 40px;
+}
+/*badge styles fro cart items on menu*/
+.badge
+{
+    background-color: #ff4b5a;
+    margin-top: -10px;
+}
+/*badge styles fro cart items on menu*/
+.shrink .badge
+{
+    margin-top: -10px;
+    background-color: white;
+    color: #ff4b5a;
+}
+/*repositions form heading text inline with form*/
+.fs-title, .fs-subtitle
+{
+    margin-left: 20px;
+}
+/*cancel new account button styles color red*/
+.red
+{
+    text-align: center;
+    background-color: #ff4b5a;
+}
+/*cancel new account button hover color red*/
+.red:hover
+{
+    text-align: center;
+    background-color: #f82a3b;
+}
+
+/*positions buttons on the view customer page*/
+.viewCust-btn a
+{
+    margin-top: 40px;
+}
+
+@media only screen and (max-width : 1197px) 
+{
+    /*repositions buttons on the view customer page*/
+    .viewCust-btn a
+    {
+        margin-top: 28px;
+    }
+}
+
+/*just added as select changes color on windows
+sets colours of select from down*/
+.sel-text 
+{
+    background-color: #2c3e50;
+    color: whitesmoke!important;
+}
+.sel-text:hover
+{
+    background-color: whitesmoke;
+    color: #2c3e50!important;
+}
